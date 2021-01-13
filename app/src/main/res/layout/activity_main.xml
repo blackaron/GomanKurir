@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/colorAccent"
+            android:gravity="left"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:textColor="@color/md_cyan_500"
+                android:id="@+id/appname"
+                android:fontFamily="serif-monospace"
+                android:textSize="28sp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DRIVER"
+                android:padding="5dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/toolbarwrap"
+        android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/lin">
+
+        <RelativeLayout
+            android:id="@+id/Relative1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="start"
+                android:textColor="@color/md_white_1000"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                style="@style/AppTheme.RoundedCornerMaterialButton"/>
+
+            <Button
+                android:id="@+id/offButton"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:visibility="invisible"
+                android:text="off"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                style="@style/AppTheme.RoundedCornerMaterialButton"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/Linear"
+        android:background="@color/md_cyan_200"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TVnamaDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="driver name"
+            android:textStyle="bold|italic"
+            android:textColor="@color/md_white_1000"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:textColor="@color/md_white_1000"
+            android:id="@+id/TVPhoneDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:hint="driver phone"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/md_blue_500"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center"
+            android:theme="@style/AppTheme"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:textSize="45sp"
+                android:id="@+id/appname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:text="@string/app_name"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilepic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:civ_border_color="@color/md_white_1000"
+                    app:civ_border_width="1dp"
+                    android:src="@drawable/user"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="4dp"
+                    android:layout_alignBottom="@id/profilepic"
+                    android:layout_alignRight="@+id/profilepic"
+                    android:src="@drawable/uploadpic"/>
+                <Button
+                    android:id="@+id/uploadpic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="4dp"
+                    android:layout_alignBottom="@+id/profilepic"
+                    android:layout_alignRight="@+id/profilepic">
+
+                </Button>
+
+            </RelativeLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                app:met_iconLeft="@drawable/man"
+                app:met_floatingLabel="highlight"
+                app:met_baseColor="@color/md_white_1000"
+                app:met_clearButton="true"
+                app:met_primaryColor="@color/md_white_1000"
+                app:met_errorColor="@color/darkWhite"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@android:drawable/sym_action_email"
+                app:met_baseColor="@color/md_white_1000"
+                app:met_errorColor="@color/darkWhite"
+                app:met_primaryColor="@color/md_white_1000"
+                app:met_clearButton="true"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                app:met_iconLeft="@drawable/lock"
+                app:met_floatingLabel="highlight"
+                android:inputType="textPassword"
+                app:met_errorColor="@color/darkWhite"
+                app:met_baseColor="@color/md_white_1000"
+                app:met_primaryColor="@color/md_white_1000"
+                app:met_clearButton="true"/>
+
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.26999998" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                app:met_iconLeft="@android:drawable/stat_sys_phone_call"
+                app:met_floatingLabel="highlight"
+                app:met_baseColor="@color/md_white_1000"
+                app:met_errorColor="@color/darkWhite"
+                app:met_clearButton="true"
+                app:met_primaryColor="@color/md_white_1000"
+                android:inputType="number">
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/Register_New"
+                    android:text="REGISTER"
+                    style="@style/AppTheme.RoundedCornerMaterialButton"
+                    android:textColor="@color/md_blue_500"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

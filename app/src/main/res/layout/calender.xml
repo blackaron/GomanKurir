@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.savvi.rangedatepicker.CalendarPickerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calendar_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="outsideOverlay"
+    android:clipToPadding="false"
+    app:tsquare_orientation_horizontal="false"
+    app:tsquare_dividerColor="@color/md_blue_500"
+    app:tsquare_headerTextColor="@color/md_red_500">
+
+</com.savvi.rangedatepicker.CalendarPickerView>

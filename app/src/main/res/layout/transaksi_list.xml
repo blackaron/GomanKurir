@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:id="@+id/Linear">
+        <TextView
+            android:id="@+id/idPesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="idPesanan"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/NamaUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nama user"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/idUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="id user"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/totalHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="total harga"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/idRestoran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="id restoran"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/NamaRestoran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nama restoran"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

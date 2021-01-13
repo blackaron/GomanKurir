@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderReport">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_cyan_500">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="58dp"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="italic|bold"
+                android:fontFamily="serif-monospace"
+                android:text="Transaksi Anda"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/toolbarwrap"
+        android:id="@+id/scroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:id="@+id/lin1"
+            android:layout_below="@+id/toolbarwrap">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recy1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/total1"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/md_cyan_500"
+        android:layout_below="@+id/scroll">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="italic|bold"
+                android:fontFamily="serif-monospace"
+                android:text="Report penghasilan"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll2"
+        android:layout_below="@+id/appbar1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <Button
+                   android:id="@+id/harian"
+                   android:layout_width="200dp"
+                   android:layout_height="40dp"
+                   android:text="penghasilan Hari ini"/>
+               <Button
+                   android:id="@+id/bulanan"
+                   android:layout_width="200dp"
+                   android:layout_height="40dp"
+                   android:text="Penghasilan bulanan"/>
+           </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/editText"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Lihat dari : "
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textAlignment="center"/>
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="35dp">
+                            <TextView
+                                android:id="@+id/dari"
+                                android:hint="dari tanggal"
+                                android:layout_width="200dp"
+                                android:layout_height="35dp"
+                                android:background="@color/md_grey_300"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="sampai : "
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textAlignment="center"/>
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="35dp">
+                            <TextView
+                                android:id="@+id/sampai"
+                                android:hint="dari tanggal"
+                                android:layout_width="200dp"
+                                android:layout_height="35dp"
+                                android:background="@color/md_grey_300"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lin2"
+                    android:visibility="invisible"
+                    android:layout_toRightOf="@+id/editText"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/cari"
+                        android:text="cari"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recy2"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="invisible"
+                    android:layout_below="@+id/editText"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recy3"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
